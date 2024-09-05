@@ -1,0 +1,45 @@
+# ConfigHardwareTrajectory.srv
+
+####################### VARIABLES OF HARDWARE ################
+bool verbose
+string elevation_port
+string exo_port
+int64 sampling_frequency
+
+#right_knee
+int64 right_knee_can_id
+bool right_knee_potentiometer
+bool right_knee_gauge
+bool right_knee_fsr1
+bool right_knee_fsr2
+
+#left_knee
+int64 left_knee_can_id
+bool left_knee_potentiometer
+bool left_knee_gauge
+bool left_knee_fsr1
+bool left_knee_fsr2
+
+#right_hip
+int64 right_hip_can_id
+bool right_hip_potentiometer
+bool right_hip_gauge
+bool right_hip_fsr1
+bool right_hip_fsr2
+
+#left_hip
+int64 left_hip_can_id
+bool left_hip_potentiometer
+bool left_hip_gauge
+bool left_hip_fsr1
+bool left_hip_fsr2
+
+
+################ VARIABLES OF TRAJECTORY ######################
+int32 size
+float64[] hip_trajectory_vector
+float64[] knee_trajectory_vector
+
+---
+# Respuesta del servicio
+bool success  # Indica si la lectura del archivo fue exitosa o no

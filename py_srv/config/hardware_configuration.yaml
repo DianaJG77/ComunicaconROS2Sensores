@@ -1,0 +1,38 @@
+#hardware_configuration
+verbose: True
+can_comm:
+  elevation_port: can1
+  exo_port: can0       # "can0" or "can1"
+
+exo_hw:
+  sampling_frequency: 500
+  joints:
+    # Uncomment connected joint and enable corresponding hardware
+    right_knee:
+      can_id: 95 # ID:05f
+      Potentiometer: True
+      Gauge: True
+      FSR1: False
+      FSR2: False
+      #has_motor: True  # Should be true for non-passive joints
+    left_knee:
+      can_id: 90 # ID:05a
+      Potentiometer: True
+      Gauge: True
+      FSR1: False
+      FSR2: False
+      #has_motor: False  # Should be true for non-passive joints
+    right_hip:
+      can_id: 85 # ID:055 - original is 75
+      Potentiometer: True
+      Gauge: True
+      FSR1: False
+      FSR2: False
+      #has_motor: False  # Should be true for non-passive joints
+    left_hip:
+      can_id: 80 # ID:050 - original is 70
+      Potentiometer: True
+      Gauge: True
+      FSR1: False
+      FSR2: False
+      #has_motor: False  # Should be true for non-passive joints
